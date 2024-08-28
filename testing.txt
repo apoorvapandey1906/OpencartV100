@@ -1,1 +1,3 @@
 Hello ! This is sample file
+Second line 
+Thirs line
