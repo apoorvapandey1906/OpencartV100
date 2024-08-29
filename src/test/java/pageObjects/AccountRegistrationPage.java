@@ -61,18 +61,23 @@ public class AccountRegistrationPage extends BasePage {
 	}
 	
 	public void clickcheckBoxAgree() {
+		waitForElementToBeClickable(checkBoxAgree);
 		checkBoxAgree.click();
 	}
 	
 	public void clickContinue() {
+		waitForElementToBeClickable(btnContinue);
 		btnContinue.click();
 	}
 	
 	public String getConfirmationMessage() {
 		try {
+			waitForElementToBeVisible(msgConfirmation);
 			return msgConfirmation.getText();
 		}catch (Exception e) {
 			return e.getMessage();
 		}
 	}
+
+	
 }

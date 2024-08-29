@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -29,6 +30,7 @@ public class BaseClass {
   public static WebDriver driver;
 public  Logger logger;	
 public Properties p;
+
 
 
 	@BeforeClass(groups={"sanity","regression","master"})
@@ -65,6 +67,7 @@ public Properties p;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
 		driver.get(p.getProperty("appURL"));  //reading URL from config.properties file
 		driver.manage().window().maximize();
+		
 	}
 	
 	
